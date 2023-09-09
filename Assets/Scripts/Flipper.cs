@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 
 public class Flipper : MonoBehaviour
 {
-    [SerializeField] private float hitStrength = 8000;
+    [SerializeField] private float hitStrength = 5000;
     [SerializeField] private float dampening = 250f;
     [SerializeField] private HingeJoint hingeJointLeft;
     [SerializeField] private HingeJoint hingeJointRight;

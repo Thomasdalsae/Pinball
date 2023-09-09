@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1843b766-bd25-492b-8646-9d7b6629c9e1" name="Changes" comment="" />
+    <list default="true" id="1843b766-bd25-492b-8646-9d7b6629c9e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pinball/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pinball/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flipper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flipper.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +98,7 @@
       <workItem from="1694114127380" duration="5375000" />
       <workItem from="1694286856883" duration="6949000" />
       <workItem from="1694295884293" duration="3051000" />
+      <workItem from="1694301511973" duration="300000" />
     </task>
     <servers />
   </component>

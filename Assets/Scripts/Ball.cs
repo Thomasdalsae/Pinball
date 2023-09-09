@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
     private Rigidbody m_Rigidbody;
     public float m_Thrust = 10000f;
     public float bouncerThrust = 1000;
-    public float flipperThrust = 500;
+    public float miniBoncerThrust = 500;
     private Vector2 previousPosition;
 
     private void Start()
@@ -47,19 +47,19 @@ public class Ball : MonoBehaviour
                  GetComponent<Rigidbody>().AddForce(dir*bouncerThrust,ForceMode.Impulse);
              }
 
-           /*  if (other.gameObject.tag=="flipper")
+             if (other.gameObject.tag=="MiniBoncer")
              {
                  Vector3 dir = other.contacts[0].point - transform.position;
 
                  dir = dir.normalized;
                  
-                 GetComponent<Rigidbody>().AddForce(dir*flipperThrust);
+                 GetComponent<Rigidbody>().AddForce(dir*miniBoncerThrust,ForceMode.Impulse);
              }
-             */
+             
     }
 
     private void Update()
-    {
+    {//Skriv forklarelse (ball spinner korrekt etter vinkel den treffer i korrekt akse)
         Vector2 position = new Vector2(transform.position.x, transform.position.y);
         Vector2 speed = position - previousPosition;
         Vector2 rotationAxis = Vector2.Perpendicular(speed);
