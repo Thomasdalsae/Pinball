@@ -9,6 +9,7 @@ TagManager:
   - Object
   - flipper
   - bouncer
+  - MiniBoncer
   layers:
   - Default
   - TransparentFX
