@@ -69,10 +69,5 @@ public class Ball : MonoBehaviour
         transform.Rotate(new Vector3(rotationAxis.x, rotationAxis.y,0),-speed.magnitude * 35, Space.World);
         //line updates the previousPosition variable to match the current position. This is important for calculating the speed in the next frame.
         previousPosition = position;
-        
-        
-
-
-
     }
 }
