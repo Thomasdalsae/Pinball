@@ -14,6 +14,9 @@ public class Ball : MonoBehaviour
     public float m_Thrust = 10000f;
     public float bouncerThrust = 1000;
     public float miniBoncerThrust = 500;
+    [SerializeField] public float points = 0;
+    [SerializeField] public int bouncerPoints = 50;
+    [SerializeField] public int MiniBouncerPoints = 25;
     private Vector2 previousPosition;
 
     private void Start()
@@ -36,7 +39,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-
+            Debug.Log("Points: "+points + other.transform.name);
              if (other.gameObject.tag=="bouncer")
              {
                  Debug.Log("Hit: " + other.transform.name);
@@ -45,6 +48,8 @@ public class Ball : MonoBehaviour
                  dir = dir.normalized;
                  
                  GetComponent<Rigidbody>().AddForce(dir*bouncerThrust,ForceMode.Impulse);
+
+                 points += bouncerPoints;
              }
 
              if (other.gameObject.tag=="MiniBoncer")
