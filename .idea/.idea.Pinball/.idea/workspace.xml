@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1843b766-bd25-492b-8646-9d7b6629c9e1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pinball/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pinball/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ball.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bouncer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bouncer.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1843b766-bd25-492b-8646-9d7b6629c9e1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +119,7 @@
       <workItem from="1694295884293" duration="3051000" />
       <workItem from="1694301511973" duration="300000" />
       <workItem from="1694371975237" duration="2926000" />
-      <workItem from="1695108363163" duration="6671000" />
+      <workItem from="1695108363163" duration="7423000" />
     </task>
     <servers />
   </component>
