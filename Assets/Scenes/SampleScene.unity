@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 111634057}
   m_Layer: 0
   m_Name: Jackpot
-  m_TagString: Untagged
+  m_TagString: Jackpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -467,7 +467,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.9526094, y: -0, z: -0, w: 0.30419627}
   m_LocalPosition: {x: -5.1211853, y: 10.85, z: -16.02}
-  m_LocalScale: {x: 3.7416866, y: 1, z: 3.1854105}
+  m_LocalScale: {x: 3.74468, y: 1, z: 3.1854105}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1750447836}
@@ -765,6 +765,7 @@ GameObject:
   - component: {fileID: 259699441}
   - component: {fileID: 259699440}
   - component: {fileID: 259699439}
+  - component: {fileID: 259699443}
   m_Layer: 0
   m_Name: MiniBouncer (2)
   m_TagString: MiniBoncer
@@ -860,6 +861,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 750745413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &259699443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259699438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d646c09fda6813499951d765736779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniBouncerSize: {x: 1.5, y: 1.5, z: 1.5}
+  resetTimer: 0.15
+  timer: 0
+  startSize: {x: 1, y: 1, z: 1}
+  ifHit: 0
 --- !u!1 &276457709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,7 +1431,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!65 &412308839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1495,7 +1513,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.000108626766, z: 0.4466451}
-  m_LocalScale: {x: 1, y: 0.88232005, z: 0.09439601}
+  m_LocalScale: {x: 1.3, y: 0.9, z: 0.09439601}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 410496656}
@@ -2696,6 +2714,7 @@ GameObject:
   - component: {fileID: 824841102}
   - component: {fileID: 824841101}
   - component: {fileID: 824841100}
+  - component: {fileID: 824841104}
   m_Layer: 0
   m_Name: MiniBouncer (3)
   m_TagString: MiniBoncer
@@ -2791,6 +2810,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 750745413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &824841104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824841099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d646c09fda6813499951d765736779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniBouncerSize: {x: 1.5, y: 1.5, z: 1.5}
+  resetTimer: 0.15
+  timer: 0
+  startSize: {x: 1, y: 1, z: 1}
+  ifHit: 0
 --- !u!1 &859106735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,6 +2944,7 @@ GameObject:
   - component: {fileID: 879060281}
   - component: {fileID: 879060280}
   - component: {fileID: 879060279}
+  - component: {fileID: 879060283}
   m_Layer: 0
   m_Name: MiniBouncer (5)
   m_TagString: MiniBoncer
@@ -3003,6 +3040,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 750745413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &879060283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879060278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d646c09fda6813499951d765736779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniBouncerSize: {x: 1.5, y: 1.5, z: 1.5}
+  resetTimer: 0.15
+  timer: 0
+  startSize: {x: 1, y: 1, z: 1}
+  ifHit: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,7 +3370,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.000108626766, z: -0.4466451}
-  m_LocalScale: {x: 1, y: 0.88232005, z: 0.09439601}
+  m_LocalScale: {x: 1.3, y: 0.9, z: 0.09439601}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 330498172}
@@ -3347,7 +3401,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!65 &1028504371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3452,7 +3506,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.354, y: 0.53615, z: 3.1372223}
+  m_ConnectedAnchor: {x: 0.38, y: 0.43114996, z: 3.1542222}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -3587,7 +3641,7 @@ Transform:
   m_GameObject: {fileID: 1110879810}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0.354, y: -0.152, z: 2.146}
+  m_LocalPosition: {x: 0.315, y: -0.202, z: 2.058}
   m_LocalScale: {x: 2.0836246, y: 2.4046, z: 0.5626678}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3609,7 +3663,7 @@ GameObject:
   - component: {fileID: 1174985777}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3718,13 +3772,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b150893811915d84da5a1ac00f022664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Thrust: 35
+  m_Thrust: 70
   bouncerThrust: 50
   miniBoncerThrust: 40
-  jackPointThrust: 2000
+  jackPointThrust: 100
   points: 0
   bouncerPoints: 50
   MiniBouncerPoints: 25
+  jackPointPoints: 500
 --- !u!135 &1174985777
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3951,7 +4006,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.621353, y: -4.8318, z: 7.91623}
-  m_LocalScale: {x: 2.8419, y: 52.229614, z: 1}
+  m_LocalScale: {x: 7.051891, y: 52.229614, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1750447836}
@@ -3968,6 +4023,7 @@ GameObject:
   - component: {fileID: 1251159642}
   - component: {fileID: 1251159641}
   - component: {fileID: 1251159640}
+  - component: {fileID: 1251159644}
   m_Layer: 0
   m_Name: MiniBouncer (1)
   m_TagString: MiniBoncer
@@ -4058,11 +4114,28 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.99, y: 0.601, z: -6.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5959, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750745413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &1251159644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251159639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d646c09fda6813499951d765736779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniBouncerSize: {x: 1.5, y: 1.5, z: 1.5}
+  resetTimer: 0.15
+  timer: 0
+  startSize: {x: 1, y: 1, z: 1}
+  ifHit: 0
 --- !u!1 &1453546466
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,7 +4236,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.57699656, y: -0, z: -0, w: 0.8167466}
   m_LocalPosition: {x: -4.276, y: 1.7581997, z: -12.67377}
-  m_LocalScale: {x: 2.1637, y: 1, z: 5.315041}
+  m_LocalScale: {x: 2.335714, y: 1.0795, z: 5.7375865}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1750447836}
@@ -4214,7 +4287,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!65 &1461826544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4296,7 +4369,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.000108626766, z: -0.4466451}
-  m_LocalScale: {x: 1.2961, y: 0.88232005, z: 0.09439601}
+  m_LocalScale: {x: 1.3, y: 0.9, z: 0.09439601}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 496754132}
@@ -4418,6 +4491,7 @@ GameObject:
   - component: {fileID: 1533435863}
   - component: {fileID: 1533435862}
   - component: {fileID: 1533435861}
+  - component: {fileID: 1533435865}
   m_Layer: 0
   m_Name: MiniBouncer
   m_TagString: MiniBoncer
@@ -4513,6 +4587,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 750745413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &1533435865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533435860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d646c09fda6813499951d765736779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniBouncerSize: {x: 1.5, y: 1.5, z: 1.5}
+  resetTimer: 0.15
+  timer: 0
+  startSize: {x: 1, y: 1, z: 1}
+  ifHit: 0
 --- !u!1 &1556761931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4543,7 +4634,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.000108626766, z: -0.4466451}
-  m_LocalScale: {x: 1, y: 0.88232005, z: 0.09439601}
+  m_LocalScale: {x: 1.3, y: 0.9, z: 0.09439601}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 276457714}
@@ -4574,7 +4665,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!65 &1556761934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4658,6 +4749,7 @@ GameObject:
   - component: {fileID: 1566726458}
   - component: {fileID: 1566726457}
   - component: {fileID: 1566726456}
+  - component: {fileID: 1566726460}
   m_Layer: 0
   m_Name: MiniBouncer (6)
   m_TagString: MiniBoncer
@@ -4753,6 +4845,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 750745413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &1566726460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566726455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d646c09fda6813499951d765736779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniBouncerSize: {x: 1.5, y: 1.5, z: 1.5}
+  resetTimer: 0.15
+  timer: 0
+  startSize: {x: 1, y: 1, z: 1}
+  ifHit: 0
 --- !u!1 &1595812312
 GameObject:
   m_ObjectHideFlags: 0
@@ -5242,6 +5351,7 @@ GameObject:
   - component: {fileID: 1863703645}
   - component: {fileID: 1863703644}
   - component: {fileID: 1863703643}
+  - component: {fileID: 1863703646}
   m_Layer: 0
   m_Name: MiniBouncer (7)
   m_TagString: MiniBoncer
@@ -5259,7 +5369,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.22, y: 0.07, z: -6.94}
-  m_LocalScale: {x: 0.72599995, y: 1.4214354, z: 0.726}
+  m_LocalScale: {x: 0.72599995, y: 2.6022217, z: 0.726}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 750745413}
@@ -5337,6 +5447,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863703641}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1863703646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863703641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d646c09fda6813499951d765736779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniBouncerSize: {x: 1.5, y: 1.5, z: 1.5}
+  resetTimer: 0.15
+  timer: 0
+  startSize: {x: 1, y: 1, z: 1}
+  ifHit: 0
 --- !u!1 &1889352684
 GameObject:
   m_ObjectHideFlags: 0
@@ -5367,7 +5494,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.000108626766, z: -0.4466451}
-  m_LocalScale: {x: 1, y: 0.88232005, z: 0.09439601}
+  m_LocalScale: {x: 1.3, y: 0.9, z: 0.09439601}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2117308793}
@@ -5398,7 +5525,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!65 &1889352687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5771,6 +5898,7 @@ GameObject:
   - component: {fileID: 2050853030}
   - component: {fileID: 2050853029}
   - component: {fileID: 2050853028}
+  - component: {fileID: 2050853032}
   m_Layer: 0
   m_Name: MiniBouncer (4)
   m_TagString: MiniBoncer
@@ -5866,6 +5994,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 750745413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &2050853032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050853027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d646c09fda6813499951d765736779f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  miniBouncerSize: {x: 1.5, y: 1.5, z: 1.5}
+  resetTimer: 0.15
+  timer: 0
+  startSize: {x: 1, y: 1, z: 1}
+  ifHit: 0
 --- !u!1 &2063424775
 GameObject:
   m_ObjectHideFlags: 0
@@ -5992,14 +6137,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063424775}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.103504255, y: -0.103504255, z: 0.6994905, w: 0.6994905}
-  m_LocalPosition: {x: -5.695239, y: 0.42025855, z: 7.180639}
+  m_LocalRotation: {x: -0.12215007, y: -0.12215007, z: 0.6964764, w: 0.6964764}
+  m_LocalPosition: {x: -5.619, y: 0.42, z: 6.969}
   m_LocalScale: {x: 1.967393, y: 3.030167, z: 0.7245852}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2137278508}
   m_Father: {fileID: 750745413}
-  m_LocalEulerAnglesHint: {x: -16.834, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -19.895, z: 90}
 --- !u!1 &2077036282
 GameObject:
   m_ObjectHideFlags: 0
@@ -6269,7 +6414,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.000108626766, z: -0.4466451}
-  m_LocalScale: {x: 1, y: 0.88232005, z: 0.09439601}
+  m_LocalScale: {x: 1.3, y: 0.9, z: 0.09439601}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2063424780}
@@ -6300,7 +6445,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!65 &2137278510
 BoxCollider:
   m_ObjectHideFlags: 0

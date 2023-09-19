@@ -13,15 +13,15 @@ public class Ball : MonoBehaviour
     private Rigidbody m_Rigidbody;
     private Vector2 previousPosition;
     //Thrust
-    public float m_Thrust = 10000f;
-    public float bouncerThrust = 1000;
-    public float miniBoncerThrust = 500;
-    public float jackPointThrust = 2000;
+    public float m_Thrust = 70f;
+    public float bouncerThrust = 50;
+    public float miniBoncerThrust = 30;
+    public float jackPointThrust = 100;
     //Points
-    [SerializeField] public float points = 0;
-    [SerializeField] public int bouncerPoints = 50;
-    [SerializeField] public int MiniBouncerPoints = 25;
-    [SerializeField] public int jackPointPoints = 500;
+    [SerializeField] private float points = 0;
+    [SerializeField] private int bouncerPoints = 50;
+    [SerializeField] private int MiniBouncerPoints = 25;
+    [SerializeField] private int jackPointPoints = 500;
     //Size
 
     private void Start()
