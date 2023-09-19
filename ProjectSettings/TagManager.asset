@@ -10,6 +10,7 @@ TagManager:
   - flipper
   - bouncer
   - MiniBoncer
+  - Jackpot
   layers:
   - Default
   - TransparentFX

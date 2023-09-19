@@ -11,13 +11,18 @@ using Vector3 = UnityEngine.Vector3;
 public class Ball : MonoBehaviour
 {
     private Rigidbody m_Rigidbody;
+    private Vector2 previousPosition;
+    //Thrust
     public float m_Thrust = 10000f;
     public float bouncerThrust = 1000;
     public float miniBoncerThrust = 500;
+    public float jackPointThrust = 2000;
+    //Points
     [SerializeField] public float points = 0;
     [SerializeField] public int bouncerPoints = 50;
     [SerializeField] public int MiniBouncerPoints = 25;
-    private Vector2 previousPosition;
+    [SerializeField] public int jackPointPoints = 500;
+    //Size
 
     private void Start()
     {
@@ -59,6 +64,18 @@ public class Ball : MonoBehaviour
                  dir = dir.normalized;
                  
                  GetComponent<Rigidbody>().AddForce(dir*miniBoncerThrust,ForceMode.Impulse);
+
+                 points += MiniBouncerPoints;
+             }
+
+             if (other.gameObject.tag=="Jackpot")
+             {
+                 Vector3 dir = other.contacts[0].point - transform.position;
+
+                 dir = dir.normalized;
+                 
+                 GetComponent<Rigidbody>().AddForce(dir*jackPointThrust,ForceMode.Impulse);
+                 points += jackPointPoints;
              }
              
     }
