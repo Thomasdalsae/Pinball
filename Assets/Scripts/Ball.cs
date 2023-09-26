@@ -63,7 +63,7 @@ public class Ball : MonoBehaviour
 
                  dir = dir.normalized;
                  
-                 GetComponent<Rigidbody>().AddForce(dir*miniBoncerThrust,ForceMode.Impulse);
+                 GetComponent<Rigidbody>().AddExplosionForce(5999f,transform.position,8);
 
                  points += MiniBouncerPoints;
              }
