@@ -2,8 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.SocialPlatforms.Impl;
 using Object = UnityEngine.Object;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -15,18 +18,25 @@ public class Ball : MonoBehaviour
     //Thrust
     public float m_Thrust = 70f;
     public float bouncerThrust = 50;
-    public float miniBoncerThrust = 30;
+    public float miniBoncerThrustEXP = 2000;
     public float jackPointThrust = 100;
     //Points
-    [SerializeField] private float points = 0;
-    [SerializeField] private int bouncerPoints = 50;
-    [SerializeField] private int MiniBouncerPoints = 25;
-    [SerializeField] private int jackPointPoints = 500;
+    [SerializeField] private int points;
+    [SerializeField] private int currentPoints;
+    [SerializeField] private int bouncerPoints = 1000;
+    [SerializeField] private int MiniBouncerPoints = 500;
+    [SerializeField] private int jackPointPoints = 5000;
+
+    private float ingameTimer = 0f;
+
+    [SerializeField] private TextMeshProUGUI textPoints;
+    [SerializeField] private TextMeshProUGUI textTime;
     //Size
 
     private void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
+        Physics.gravity = new Vector3(0, -25, 0);
     }
 
     void OnTriggerEnter(Collider Object)
@@ -42,6 +52,12 @@ public class Ball : MonoBehaviour
                    
               }
 
+    
+    public void IncreaseScore(int amount)
+    {
+        points += amount;
+    }
+    
     private void OnCollisionEnter(Collision other)
     {
             Debug.Log("Points: "+points + other.transform.name);
@@ -54,7 +70,7 @@ public class Ball : MonoBehaviour
                  
                  GetComponent<Rigidbody>().AddForce(dir*bouncerThrust,ForceMode.Impulse);
 
-                 points += bouncerPoints;
+                IncreaseScore(bouncerPoints); 
              }
 
              if (other.gameObject.tag=="MiniBoncer")
@@ -63,9 +79,10 @@ public class Ball : MonoBehaviour
 
                  dir = dir.normalized;
                  
-                 GetComponent<Rigidbody>().AddExplosionForce(3000f,transform.position,5);
+                 //GetComponent<Rigidbody>().AddExplosionForce(bouncerThrust,transform.position,8);
+                 GetComponent<Rigidbody>().AddForce(dir * miniBoncerThrustEXP,ForceMode.Impulse);
 
-                 points += MiniBouncerPoints;
+                 IncreaseScore(MiniBouncerPoints);
              }
 
              if (other.gameObject.tag=="Jackpot")
@@ -76,12 +93,31 @@ public class Ball : MonoBehaviour
                  
                  GetComponent<Rigidbody>().AddForce(dir*jackPointThrust,ForceMode.Impulse);
                  points += jackPointPoints;
+                 
+                 IncreaseScore(5000);
              }
              
     }
 
     private void Update()
-    {//Skriv forklarelse (ball spinner korrekt etter vinkel den treffer i korrekt akse)
+    {
+
+        ingameTimer += Time.deltaTime;
+        textTime.text = "Timer: " + Mathf.Round(ingameTimer);
+        
+        if (currentPoints < points)
+        {
+            currentPoints += (int)(1000 * Time.deltaTime);
+            if (currentPoints > points)
+            {
+                currentPoints = points;
+            }
+
+            textPoints.text = currentPoints.ToString("00000000");
+        }
+        
+        
+        //Skriv forklarelse (ball spinner korrekt etter vinkel den treffer i korrekt akse)
         Vector2 position = new Vector2(transform.position.x, transform.position.y);
         //calculates the object's movement direction and speed between frames
         Vector2 speed = position - previousPosition;
