@@ -31,6 +31,8 @@ public class Ball : MonoBehaviour
     private float ingameTimer = 0f;
     private int ingameLife = 3;
     private float deathCD = 10f;
+    private int extra;
+    private int extraLifeInterval = 30000; 
 
     [SerializeField] private TextMeshProUGUI textPoints;
     [SerializeField] private TextMeshProUGUI textTime;
@@ -41,6 +43,10 @@ public class Ball : MonoBehaviour
     {
         m_Rigidbody = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, -25, 0);
+
+        points = 0;
+        ingameLife = 3;
+        extra = extraLifeInterval;
     }
 
     void OnTriggerEnter(Collider Object)
@@ -132,7 +138,7 @@ public class Ball : MonoBehaviour
         textLife.text = "Life: " + ingameLife; 
         if (currentPoints < points)
         {
-            currentPoints += (int)(1000 * Time.deltaTime);
+            currentPoints += (int)(8500 * Time.deltaTime);
             if (currentPoints > points)
             {
                 currentPoints = points;
@@ -141,7 +147,12 @@ public class Ball : MonoBehaviour
             textPoints.text = currentPoints.ToString("00000000");
             
         }
-        
+
+        if (points >= extra)
+        {
+            ingameLife += 1;
+            extra += extraLifeInterval;
+        }
         
         //Skriv forklarelse (ball spinner korrekt etter vinkel den treffer i korrekt akse)
         Vector2 position = new Vector2(transform.position.x, transform.position.y);
