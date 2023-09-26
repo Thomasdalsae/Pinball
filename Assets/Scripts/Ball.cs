@@ -153,7 +153,7 @@ public class Ball : MonoBehaviour
             ingameLife += 1;
             extra += extraLifeInterval;
         }
-        
+
         //Skriv forklarelse (ball spinner korrekt etter vinkel den treffer i korrekt akse)
         Vector2 position = new Vector2(transform.position.x, transform.position.y);
         //calculates the object's movement direction and speed between frames
