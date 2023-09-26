@@ -5,6 +5,7 @@ using System.Numerics;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.SocialPlatforms.Impl;
 using Object = UnityEngine.Object;
@@ -28,9 +29,12 @@ public class Ball : MonoBehaviour
     [SerializeField] private int jackPointPoints = 5000;
 
     private float ingameTimer = 0f;
+    private int ingameLife = 3;
+    private float deathCD = 10f;
 
     [SerializeField] private TextMeshProUGUI textPoints;
     [SerializeField] private TextMeshProUGUI textTime;
+    [SerializeField] private TextMeshProUGUI textLife;
     //Size
 
     private void Start()
@@ -60,6 +64,8 @@ public class Ball : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
+        
+        
             Debug.Log("Points: "+points + other.transform.name);
              if (other.gameObject.tag=="bouncer")
              {
@@ -72,6 +78,8 @@ public class Ball : MonoBehaviour
 
                 IncreaseScore(bouncerPoints); 
              }
+             
+             
 
              if (other.gameObject.tag=="MiniBoncer")
              {
@@ -96,15 +104,32 @@ public class Ball : MonoBehaviour
                  
                  IncreaseScore(5000);
              }
+
+             if (other.gameObject.tag =="Out")
+             {
+                 if (deathCD > 10)
+                 {
+                    ingameLife--;
+                    deathCD = 0;
+                 }
+                 if (ingameLife == 0)
+                 {
+                     SceneManager.LoadScene("MainMenu");
+                 }
+             }
+             
              
     }
+    
+    
+    
 
     private void Update()
     {
-
+        deathCD += Time.deltaTime;
         ingameTimer += Time.deltaTime;
         textTime.text = "Timer: " + Mathf.Round(ingameTimer);
-        
+        textLife.text = "Life: " + ingameLife; 
         if (currentPoints < points)
         {
             currentPoints += (int)(1000 * Time.deltaTime);
@@ -114,6 +139,7 @@ public class Ball : MonoBehaviour
             }
 
             textPoints.text = currentPoints.ToString("00000000");
+            
         }
         
         

@@ -11,6 +11,7 @@ TagManager:
   - bouncer
   - MiniBoncer
   - Jackpot
+  - Out
   layers:
   - Default
   - TransparentFX
