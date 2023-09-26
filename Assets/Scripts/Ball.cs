@@ -161,7 +161,7 @@ public class Ball : MonoBehaviour
         //used to determine the rotation axis for an object based on its movement direction.
         Vector2 rotationAxis = Vector2.Perpendicular(speed);
         //This determines the axis around which the object will rotate. rotating in the opposite direction of its movement
-        transform.Rotate(new Vector3(rotationAxis.x, rotationAxis.y,0),-speed.magnitude * 35, Space.World);
+        transform.Rotate(new Vector3(rotationAxis.x, rotationAxis.y,0),speed.magnitude * 45, Space.World);
         //line updates the previousPosition variable to match the current position. This is important for calculating the speed in the next frame.
         previousPosition = position;
     }
